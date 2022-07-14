@@ -1,0 +1,106 @@
+:root {
+    --main: #000000;
+    --second: #52057B;
+    --third: #892CDC;
+    --contrast: #BC6FF1;
+}
+
+/* * {outline: solid red;} */
+
+body {
+    overflow: hidden;
+    min-width: 98vw;
+    min-height: 99vh;
+    background-color: var(--main);
+    color: var(--contrast);
+    display: grid;
+    place-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+}
+
+section {
+    width: 20vw;
+    margin: 0 3em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+}
+
+.options {
+    background-color: var(--second);
+    border-radius: 50%;
+    border-color: var(--third);
+    border-style: solid;
+    padding: 5vw;
+    margin: 1em;
+}
+
+.game_images {
+    width: 12.5vw;
+    pointer-events: none;
+}
+
+.computer_image {
+    background-color: var(--third);
+    border-radius: 50%;
+    border-color: var(--second);
+    border-style: solid;
+    padding: 5vw;
+    margin: 1em;
+    aspect-ratio: 1/1;
+    width: 12.5vw;
+    pointer-events: none;
+}
+
+.options:hover {
+    transition-property: border-color, border-width, margin;
+    transition-duration: 100ms;
+    border-color: var(--contrast);
+    border-width: .5em;
+    margin: .6em .6em .7em .6em;
+}
+.options:focus {
+    transition-property: backgraound-color, border-color, border-width, margin;
+    transition-duration: 100ms;
+    background-color: var(--contrast);
+    border-color: var(--third);
+    border-width: .5em;
+    margin: .6em .6em .7em .6em;
+}
+
+footer > img {
+    width: 7vw;
+    vertical-align: middle;
+}
+
+@media (orientation: landscape) {
+    .options {
+        padding: 2.5vw;
+    }
+    
+    .game_images {
+        width: 6vw;
+    }
+
+    .computer_image {
+        width: 6vw;
+        padding: 3vw;
+    }
+
+    footer > img {
+        width: 5vw;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 400px) {
+    section {
+        width: 10vw;
+    }
+}
