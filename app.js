@@ -38,7 +38,7 @@ function oponent() {
                 output_value = "Rock"; break;
         case 1: output = "<img class='game_images' src='/imgs/open-hand.png' alt='Paper'>";
                 output_value = "Paper"; break;
-        case 2: output = "<img class = 'game_images' src='/imgs/peace.png' alt='Rock'>";
+        case 2: output = "<img class = 'game_images' src='/imgs/peace.png' alt='Scissors'>";
                 output_value = "Scissors"; break;
         default: break;
     }
